@@ -1,0 +1,6 @@
+nfq_weather:
+    resource: "@nfqWeatherBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
