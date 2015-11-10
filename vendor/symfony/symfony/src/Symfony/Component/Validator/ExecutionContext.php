@@ -16,7 +16,7 @@ namespace Symfony\Component\Validator;
 use Symfony\Component\Translation\TranslatorInterface;
 
 /**
- * Weather implementation of {@link ExecutionContextInterface}.
+ * Default implementation of {@link ExecutionContextInterface}.
  *
  * This class is immutable by design.
  *

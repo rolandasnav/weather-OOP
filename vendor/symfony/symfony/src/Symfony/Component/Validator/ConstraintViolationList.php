@@ -12,7 +12,7 @@
 namespace Symfony\Component\Validator;
 
 /**
- * Weather implementation of {@ConstraintViolationListInterface}.
+ * Default implementation of {@ConstraintViolationListInterface}.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

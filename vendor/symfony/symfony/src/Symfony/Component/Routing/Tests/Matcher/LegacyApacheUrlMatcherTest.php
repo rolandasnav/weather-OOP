@@ -55,11 +55,11 @@ class LegacyApacheUrlMatcherTest extends \PHPUnit_Framework_TestCase
                 '/hello/world',
                 array(
                     '_ROUTING_route' => 'hello',
-                    '_ROUTING_param__controller' => 'AcmeBundle:Weather:index',
+                    '_ROUTING_param__controller' => 'AcmeBundle:Default:index',
                     '_ROUTING_param_name' => 'world',
                 ),
                 array(
-                    '_controller' => 'AcmeBundle:Weather:index',
+                    '_controller' => 'AcmeBundle:Default:index',
                     'name' => 'world',
                     '_route' => 'hello',
                 ),
@@ -69,13 +69,13 @@ class LegacyApacheUrlMatcherTest extends \PHPUnit_Framework_TestCase
                 '/hello/hugo',
                 array(
                     '_ROUTING_route' => 'hello',
-                    '_ROUTING_param__controller' => 'AcmeBundle:Weather:index',
+                    '_ROUTING_param__controller' => 'AcmeBundle:Default:index',
                     '_ROUTING_param_name' => 'hugo',
                     '_ROUTING_default_name' => 'world',
                 ),
                 array(
                     'name' => 'hugo',
-                    '_controller' => 'AcmeBundle:Weather:index',
+                    '_controller' => 'AcmeBundle:Default:index',
                     '_route' => 'hello',
                 ),
             ),
@@ -84,12 +84,12 @@ class LegacyApacheUrlMatcherTest extends \PHPUnit_Framework_TestCase
                 '/hello',
                 array(
                     '_ROUTING_route' => 'hello',
-                    '_ROUTING_param__controller' => 'AcmeBundle:Weather:index',
+                    '_ROUTING_param__controller' => 'AcmeBundle:Default:index',
                     '_ROUTING_default_name' => 'world',
                 ),
                 array(
                     'name' => 'world',
-                    '_controller' => 'AcmeBundle:Weather:index',
+                    '_controller' => 'AcmeBundle:Default:index',
                     '_route' => 'hello',
                 ),
             ),
@@ -113,11 +113,11 @@ class LegacyApacheUrlMatcherTest extends \PHPUnit_Framework_TestCase
                 '/hello/world',
                 array(
                     'REDIRECT__ROUTING_route' => 'hello',
-                    'REDIRECT__ROUTING_param__controller' => 'AcmeBundle:Weather:index',
+                    'REDIRECT__ROUTING_param__controller' => 'AcmeBundle:Default:index',
                     'REDIRECT__ROUTING_param_name' => 'world',
                 ),
                 array(
-                    '_controller' => 'AcmeBundle:Weather:index',
+                    '_controller' => 'AcmeBundle:Default:index',
                     'name' => 'world',
                     '_route' => 'hello',
                 ),
@@ -127,11 +127,11 @@ class LegacyApacheUrlMatcherTest extends \PHPUnit_Framework_TestCase
                 '/hello/world',
                 array(
                     'REDIRECT_REDIRECT__ROUTING_route' => 'hello',
-                    'REDIRECT_REDIRECT__ROUTING_param__controller' => 'AcmeBundle:Weather:index',
+                    'REDIRECT_REDIRECT__ROUTING_param__controller' => 'AcmeBundle:Default:index',
                     'REDIRECT_REDIRECT__ROUTING_param_name' => 'world',
                 ),
                 array(
-                    '_controller' => 'AcmeBundle:Weather:index',
+                    '_controller' => 'AcmeBundle:Default:index',
                     'name' => 'world',
                     '_route' => 'hello',
                 ),
@@ -141,11 +141,11 @@ class LegacyApacheUrlMatcherTest extends \PHPUnit_Framework_TestCase
                 '/hello/world',
                 array(
                     'REDIRECT_REDIRECT__ROUTING_route' => 'hello',
-                    'REDIRECT_REDIRECT__ROUTING_param__controller' => 'AcmeBundle:Weather:index',
+                    'REDIRECT_REDIRECT__ROUTING_param__controller' => 'AcmeBundle:Default:index',
                     'REDIRECT_REDIRECT__ROUTING_param_name' => 'world',
                 ),
                 array(
-                    '_controller' => 'AcmeBundle:Weather:index',
+                    '_controller' => 'AcmeBundle:Default:index',
                     'name' => 'world',
                     '_route' => 'hello',
                 ),

@@ -18,7 +18,7 @@ use Symfony\Component\Intl\Data\Provider\ScriptDataProvider;
 use Symfony\Component\Intl\Exception\MissingResourceException;
 
 /**
- * Weather implementation of {@link LanguageBundleInterface}.
+ * Default implementation of {@link LanguageBundleInterface}.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  *

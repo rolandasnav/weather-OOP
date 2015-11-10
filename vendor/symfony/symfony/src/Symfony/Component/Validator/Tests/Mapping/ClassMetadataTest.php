@@ -63,8 +63,8 @@ class ClassMetadataTest extends \PHPUnit_Framework_TestCase
         $this->metadata->addPropertyConstraints('lastName', array(new ConstraintA(), new ConstraintB()));
 
         $constraints = array(
-            new ConstraintA(array('groups' => array('Weather', 'Entity'))),
-            new ConstraintB(array('groups' => array('Weather', 'Entity'))),
+            new ConstraintA(array('groups' => array('Default', 'Entity'))),
+            new ConstraintB(array('groups' => array('Default', 'Entity'))),
         );
 
         $properties = $this->metadata->getPropertyMetadata('lastName');
@@ -80,8 +80,8 @@ class ClassMetadataTest extends \PHPUnit_Framework_TestCase
         $this->metadata->addGetterConstraint('lastName', new ConstraintB());
 
         $constraints = array(
-            new ConstraintA(array('groups' => array('Weather', 'Entity'))),
-            new ConstraintB(array('groups' => array('Weather', 'Entity'))),
+            new ConstraintA(array('groups' => array('Default', 'Entity'))),
+            new ConstraintB(array('groups' => array('Default', 'Entity'))),
         );
 
         $properties = $this->metadata->getPropertyMetadata('lastName');
@@ -96,8 +96,8 @@ class ClassMetadataTest extends \PHPUnit_Framework_TestCase
         $this->metadata->addGetterConstraints('lastName', array(new ConstraintA(), new ConstraintB()));
 
         $constraints = array(
-            new ConstraintA(array('groups' => array('Weather', 'Entity'))),
-            new ConstraintB(array('groups' => array('Weather', 'Entity'))),
+            new ConstraintA(array('groups' => array('Default', 'Entity'))),
+            new ConstraintB(array('groups' => array('Default', 'Entity'))),
         );
 
         $properties = $this->metadata->getPropertyMetadata('lastName');
@@ -117,12 +117,12 @@ class ClassMetadataTest extends \PHPUnit_Framework_TestCase
 
         $constraints = array(
             new ConstraintA(array('groups' => array(
-                'Weather',
+                'Default',
                 'EntityParent',
                 'Entity',
             ))),
             new ConstraintA(array('groups' => array(
-                'Weather',
+                'Default',
                 'Entity',
             ))),
         );
@@ -140,12 +140,12 @@ class ClassMetadataTest extends \PHPUnit_Framework_TestCase
 
         $constraints = array(
             new ConstraintA(array('groups' => array(
-                'Weather',
+                'Default',
                 'EntityParent',
                 'Entity',
             ))),
             new ConstraintA(array('groups' => array(
-                'Weather',
+                'Default',
                 'Entity',
             ))),
         );
@@ -175,14 +175,14 @@ class ClassMetadataTest extends \PHPUnit_Framework_TestCase
 
         $parentConstraints = array(
             new ConstraintA(array('groups' => array(
-                'Weather',
+                'Default',
                 'EntityParent',
                 'Entity',
             ))),
         );
         $constraints = array(
             new ConstraintA(array('groups' => array(
-                'Weather',
+                'Default',
                 'Entity',
             ))),
         );

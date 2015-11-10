@@ -41,13 +41,13 @@ class CompositeTest extends \PHPUnit_Framework_TestCase
     public function testMergeNestedGroupsIfNoExplicitParentGroup()
     {
         $constraint = new ConcreteComposite(array(
-            new NotNull(array('groups' => 'Weather')),
-            new NotBlank(array('groups' => array('Weather', 'Strict'))),
+            new NotNull(array('groups' => 'Default')),
+            new NotBlank(array('groups' => array('Default', 'Strict'))),
         ));
 
-        $this->assertEquals(array('Weather', 'Strict'), $constraint->groups);
-        $this->assertEquals(array('Weather'), $constraint->constraints[0]->groups);
-        $this->assertEquals(array('Weather', 'Strict'), $constraint->constraints[1]->groups);
+        $this->assertEquals(array('Default', 'Strict'), $constraint->groups);
+        $this->assertEquals(array('Default'), $constraint->constraints[0]->groups);
+        $this->assertEquals(array('Default', 'Strict'), $constraint->constraints[1]->groups);
     }
 
     public function testSetImplicitNestedGroupsIfExplicitParentGroup()
@@ -57,26 +57,26 @@ class CompositeTest extends \PHPUnit_Framework_TestCase
                 new NotNull(),
                 new NotBlank(),
             ),
-            'groups' => array('Weather', 'Strict'),
+            'groups' => array('Default', 'Strict'),
         ));
 
-        $this->assertEquals(array('Weather', 'Strict'), $constraint->groups);
-        $this->assertEquals(array('Weather', 'Strict'), $constraint->constraints[0]->groups);
-        $this->assertEquals(array('Weather', 'Strict'), $constraint->constraints[1]->groups);
+        $this->assertEquals(array('Default', 'Strict'), $constraint->groups);
+        $this->assertEquals(array('Default', 'Strict'), $constraint->constraints[0]->groups);
+        $this->assertEquals(array('Default', 'Strict'), $constraint->constraints[1]->groups);
     }
 
     public function testExplicitNestedGroupsMustBeSubsetOfExplicitParentGroups()
     {
         $constraint = new ConcreteComposite(array(
             'constraints' => array(
-                new NotNull(array('groups' => 'Weather')),
+                new NotNull(array('groups' => 'Default')),
                 new NotBlank(array('groups' => 'Strict')),
             ),
-            'groups' => array('Weather', 'Strict'),
+            'groups' => array('Default', 'Strict'),
         ));
 
-        $this->assertEquals(array('Weather', 'Strict'), $constraint->groups);
-        $this->assertEquals(array('Weather'), $constraint->constraints[0]->groups);
+        $this->assertEquals(array('Default', 'Strict'), $constraint->groups);
+        $this->assertEquals(array('Default'), $constraint->constraints[0]->groups);
         $this->assertEquals(array('Strict'), $constraint->constraints[1]->groups);
     }
 
@@ -87,23 +87,23 @@ class CompositeTest extends \PHPUnit_Framework_TestCase
     {
         new ConcreteComposite(array(
             'constraints' => array(
-                new NotNull(array('groups' => array('Weather', 'Foobar'))),
+                new NotNull(array('groups' => array('Default', 'Foobar'))),
             ),
-            'groups' => array('Weather', 'Strict'),
+            'groups' => array('Default', 'Strict'),
         ));
     }
 
     public function testImplicitGroupNamesAreForwarded()
     {
         $constraint = new ConcreteComposite(array(
-            new NotNull(array('groups' => 'Weather')),
+            new NotNull(array('groups' => 'Default')),
             new NotBlank(array('groups' => 'Strict')),
         ));
 
         $constraint->addImplicitGroupName('ImplicitGroup');
 
-        $this->assertEquals(array('Weather', 'Strict', 'ImplicitGroup'), $constraint->groups);
-        $this->assertEquals(array('Weather', 'ImplicitGroup'), $constraint->constraints[0]->groups);
+        $this->assertEquals(array('Default', 'Strict', 'ImplicitGroup'), $constraint->groups);
+        $this->assertEquals(array('Default', 'ImplicitGroup'), $constraint->constraints[0]->groups);
         $this->assertEquals(array('Strict'), $constraint->constraints[1]->groups);
     }
 
@@ -121,7 +121,7 @@ class CompositeTest extends \PHPUnit_Framework_TestCase
     public function testFailIfNoConstraint()
     {
         new ConcreteComposite(array(
-            new NotNull(array('groups' => 'Weather')),
+            new NotNull(array('groups' => 'Default')),
             'NotBlank',
         ));
     }

@@ -18,7 +18,7 @@ use Symfony\Component\Validator\Exception\NoSuchMetadataException;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
 /**
- * Weather implementation of {@link ValidationVisitorInterface} and
+ * Default implementation of {@link ValidationVisitorInterface} and
  * {@link GlobalExecutionContextInterface}.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>

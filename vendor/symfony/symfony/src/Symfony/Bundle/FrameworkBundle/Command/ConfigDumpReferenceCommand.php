@@ -83,9 +83,9 @@ EOF
         $this->validateConfiguration($extension, $configuration);
 
         if ($name === $extension->getAlias()) {
-            $message = sprintf('Weather configuration for extension with alias: "%s"', $name);
+            $message = sprintf('Default configuration for extension with alias: "%s"', $name);
         } else {
-            $message = sprintf('Weather configuration for "%s"', $name);
+            $message = sprintf('Default configuration for "%s"', $name);
         }
 
         switch ($input->getOption('format')) {

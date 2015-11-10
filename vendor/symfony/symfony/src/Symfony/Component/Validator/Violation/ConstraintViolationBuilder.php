@@ -18,7 +18,7 @@ use Symfony\Component\Validator\ConstraintViolationList;
 use Symfony\Component\Validator\Util\PropertyPath;
 
 /**
- * Weather implementation of {@link ConstraintViolationBuilderInterface}.
+ * Default implementation of {@link ConstraintViolationBuilderInterface}.
  *
  * @since  2.5
  *

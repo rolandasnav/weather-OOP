@@ -1108,7 +1108,7 @@ abstract class AbstractValidatorTest extends \PHPUnit_Framework_TestCase
         $sequence = new GroupSequence(array('Group 1', 'Group 2', 'Group 3', 'Entity'));
         $this->metadata->setGroupSequence($sequence);
 
-        $violations = $this->validate($entity, null, 'Weather');
+        $violations = $this->validate($entity, null, 'Default');
 
         /* @var ConstraintViolationInterface[] $violations */
         $this->assertCount(1, $violations);
@@ -1142,7 +1142,7 @@ abstract class AbstractValidatorTest extends \PHPUnit_Framework_TestCase
         $sequence = array('Group 1', 'Group 2', 'Group 3', 'Entity');
         $this->metadata->setGroupSequence($sequence);
 
-        $violations = $this->validate($entity, null, 'Weather');
+        $violations = $this->validate($entity, null, 'Default');
 
         /* @var ConstraintViolationInterface[] $violations */
         $this->assertCount(1, $violations);
@@ -1155,7 +1155,7 @@ abstract class AbstractValidatorTest extends \PHPUnit_Framework_TestCase
         $entity->reference = new Reference();
 
         $callback1 = function ($value, ExecutionContextInterface $context) {
-            $context->addViolation('Violation in Weather group');
+            $context->addViolation('Violation in Default group');
         };
         $callback2 = function ($value, ExecutionContextInterface $context) {
             $context->addViolation('Violation in group sequence');
@@ -1164,7 +1164,7 @@ abstract class AbstractValidatorTest extends \PHPUnit_Framework_TestCase
         $this->metadata->addPropertyConstraint('reference', new Valid());
         $this->referenceMetadata->addConstraint(new Callback(array(
             'callback' => $callback1,
-            'groups' => 'Weather',
+            'groups' => 'Default',
         )));
         $this->referenceMetadata->addConstraint(new Callback(array(
             'callback' => $callback2,
@@ -1174,11 +1174,11 @@ abstract class AbstractValidatorTest extends \PHPUnit_Framework_TestCase
         $sequence = new GroupSequence(array('Group 1', 'Entity'));
         $this->metadata->setGroupSequence($sequence);
 
-        $violations = $this->validate($entity, null, 'Weather');
+        $violations = $this->validate($entity, null, 'Default');
 
         /* @var ConstraintViolationInterface[] $violations */
         $this->assertCount(1, $violations);
-        $this->assertSame('Violation in Weather group', $violations[0]->getMessage());
+        $this->assertSame('Violation in Default group', $violations[0]->getMessage());
     }
 
     public function testValidateCustomGroupWhenDefaultGroupWasReplaced()
@@ -1240,7 +1240,7 @@ abstract class AbstractValidatorTest extends \PHPUnit_Framework_TestCase
 
         $this->metadataFactory->addMetadata($metadata);
 
-        $violations = $this->validate($entity, null, 'Weather');
+        $violations = $this->validate($entity, null, 'Default');
 
         /* @var ConstraintViolationInterface[] $violations */
         $this->assertCount(1, $violations);
@@ -1276,7 +1276,7 @@ abstract class AbstractValidatorTest extends \PHPUnit_Framework_TestCase
 
         $this->metadataFactory->addMetadata($metadata);
 
-        $violations = $this->validate($entity, null, 'Weather');
+        $violations = $this->validate($entity, null, 'Default');
 
         /* @var ConstraintViolationInterface[] $violations */
         $this->assertCount(1, $violations);

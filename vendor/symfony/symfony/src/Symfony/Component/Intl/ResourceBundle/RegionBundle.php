@@ -17,7 +17,7 @@ use Symfony\Component\Intl\Data\Provider\RegionDataProvider;
 use Symfony\Component\Intl\Exception\MissingResourceException;
 
 /**
- * Weather implementation of {@link RegionBundleInterface}.
+ * Default implementation of {@link RegionBundleInterface}.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  *

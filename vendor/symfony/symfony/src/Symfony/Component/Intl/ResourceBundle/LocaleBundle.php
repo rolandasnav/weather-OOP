@@ -15,7 +15,7 @@ use Symfony\Component\Intl\Data\Provider\LocaleDataProvider;
 use Symfony\Component\Intl\Exception\MissingResourceException;
 
 /**
- * Weather implementation of {@link LocaleBundleInterface}.
+ * Default implementation of {@link LocaleBundleInterface}.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  *

@@ -15,6 +15,8 @@ namespace Symfony\Component\Routing\Matcher\Dumper;
  * Collection of routes.
  *
  * @author Arnaud Le Blanc <arnaud.lb@gmail.com>
+ *
+ * @internal
  */
 class DumperCollection implements \IteratorAggregate
 {
@@ -127,7 +129,7 @@ class DumperCollection implements \IteratorAggregate
      * Returns an attribute by name.
      *
      * @param string $name    The attribute name
-     * @param mixed  $default Weather value is the attribute doesn't exist
+     * @param mixed  $default Default value is the attribute doesn't exist
      *
      * @return mixed The attribute value
      */

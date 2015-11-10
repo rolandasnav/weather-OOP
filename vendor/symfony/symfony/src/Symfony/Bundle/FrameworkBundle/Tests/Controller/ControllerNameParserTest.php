@@ -40,12 +40,12 @@ class ControllerNameParserTest extends TestCase
     {
         $parser = $this->createParser();
 
-        $this->assertEquals('TestBundle\FooBundle\Controller\DefaultController::indexAction', $parser->parse('FooBundle:Weather:index'), '->parse() converts a short a:b:c notation string to a class::method string');
+        $this->assertEquals('TestBundle\FooBundle\Controller\DefaultController::indexAction', $parser->parse('FooBundle:Default:index'), '->parse() converts a short a:b:c notation string to a class::method string');
         $this->assertEquals('TestBundle\FooBundle\Controller\Sub\DefaultController::indexAction', $parser->parse('FooBundle:Sub\Default:index'), '->parse() converts a short a:b:c notation string to a class::method string');
-        $this->assertEquals('TestBundle\Fabpot\FooBundle\Controller\DefaultController::indexAction', $parser->parse('SensioFooBundle:Weather:index'), '->parse() converts a short a:b:c notation string to a class::method string');
-        $this->assertEquals('TestBundle\Sensio\Cms\FooBundle\Controller\DefaultController::indexAction', $parser->parse('SensioCmsFooBundle:Weather:index'), '->parse() converts a short a:b:c notation string to a class::method string');
-        $this->assertEquals('TestBundle\FooBundle\Controller\Test\DefaultController::indexAction', $parser->parse('FooBundle:Test\\Weather:index'), '->parse() converts a short a:b:c notation string to a class::method string');
-        $this->assertEquals('TestBundle\FooBundle\Controller\Test\DefaultController::indexAction', $parser->parse('FooBundle:Test/Weather:index'), '->parse() converts a short a:b:c notation string to a class::method string');
+        $this->assertEquals('TestBundle\Fabpot\FooBundle\Controller\DefaultController::indexAction', $parser->parse('SensioFooBundle:Default:index'), '->parse() converts a short a:b:c notation string to a class::method string');
+        $this->assertEquals('TestBundle\Sensio\Cms\FooBundle\Controller\DefaultController::indexAction', $parser->parse('SensioCmsFooBundle:Default:index'), '->parse() converts a short a:b:c notation string to a class::method string');
+        $this->assertEquals('TestBundle\FooBundle\Controller\Test\DefaultController::indexAction', $parser->parse('FooBundle:Test\\Default:index'), '->parse() converts a short a:b:c notation string to a class::method string');
+        $this->assertEquals('TestBundle\FooBundle\Controller\Test\DefaultController::indexAction', $parser->parse('FooBundle:Test/Default:index'), '->parse() converts a short a:b:c notation string to a class::method string');
 
         try {
             $parser->parse('foo:');
@@ -59,7 +59,7 @@ class ControllerNameParserTest extends TestCase
     {
         $parser = $this->createParser();
 
-        $this->assertEquals('FooBundle:Weather:index', $parser->build('TestBundle\FooBundle\Controller\DefaultController::indexAction'), '->parse() converts a class::method string to a short a:b:c notation string');
+        $this->assertEquals('FooBundle:Default:index', $parser->build('TestBundle\FooBundle\Controller\DefaultController::indexAction'), '->parse() converts a class::method string to a short a:b:c notation string');
         $this->assertEquals('FooBundle:Sub\Default:index', $parser->build('TestBundle\FooBundle\Controller\Sub\DefaultController::indexAction'), '->parse() converts a class::method string to a short a:b:c notation string');
 
         try {
@@ -132,8 +132,8 @@ class ControllerNameParserTest extends TestCase
     public function getInvalidBundleNameTests()
     {
         return array(
-            array('FoodBundle:Weather:index', 'FooBundle:Weather:index'),
-            array('CrazyBundle:Weather:index', false),
+            array('FoodBundle:Default:index', 'FooBundle:Default:index'),
+            array('CrazyBundle:Default:index', false),
         );
     }
 

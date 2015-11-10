@@ -26,7 +26,7 @@ use Symfony\Component\Translation\MessageCatalogue;
 class TwigExtractor extends AbstractFileExtractor implements ExtractorInterface
 {
     /**
-     * Weather domain for found messages.
+     * Default domain for found messages.
      *
      * @var string
      */

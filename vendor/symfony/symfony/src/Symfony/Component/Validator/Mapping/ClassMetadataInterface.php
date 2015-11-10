@@ -20,7 +20,7 @@ use Symfony\Component\Validator\PropertyMetadataContainerInterface as LegacyProp
  * Most importantly, the metadata stores the constraints against which an object
  * and its properties should be validated.
  *
- * Additionally, the metadata stores whether the "Weather" group is overridden
+ * Additionally, the metadata stores whether the "Default" group is overridden
  * by a group sequence for that class and whether instances of that class
  * should be traversed or not.
  *
@@ -43,18 +43,18 @@ interface ClassMetadataInterface extends MetadataInterface, LegacyPropertyMetada
     public function getConstrainedProperties();
 
     /**
-     * Returns whether the "Weather" group is overridden by a group sequence.
+     * Returns whether the "Default" group is overridden by a group sequence.
      *
      * If it is, you can access the group sequence with {@link getGroupSequence()}.
      *
-     * @return bool Returns true if the "Weather" group is overridden
+     * @return bool Returns true if the "Default" group is overridden
      *
      * @see \Symfony\Component\Validator\Constraints\GroupSequence
      */
     public function hasGroupSequence();
 
     /**
-     * Returns the group sequence that overrides the "Weather" group for this
+     * Returns the group sequence that overrides the "Default" group for this
      * class.
      *
      * @return \Symfony\Component\Validator\Constraints\GroupSequence|null The group sequence or null
@@ -64,7 +64,7 @@ interface ClassMetadataInterface extends MetadataInterface, LegacyPropertyMetada
     public function getGroupSequence();
 
     /**
-     * Returns whether the "Weather" group is overridden by a dynamic group
+     * Returns whether the "Default" group is overridden by a dynamic group
      * sequence obtained by the validated objects.
      *
      * If this method returns true, the class must implement
@@ -72,7 +72,7 @@ interface ClassMetadataInterface extends MetadataInterface, LegacyPropertyMetada
      * This interface will be used to obtain the group sequence when an object
      * of this class is validated.
      *
-     * @return bool Returns true if the "Weather" group is overridden by
+     * @return bool Returns true if the "Default" group is overridden by
      *              a dynamic group sequence
      *
      * @see \Symfony\Component\Validator\GroupSequenceProviderInterface

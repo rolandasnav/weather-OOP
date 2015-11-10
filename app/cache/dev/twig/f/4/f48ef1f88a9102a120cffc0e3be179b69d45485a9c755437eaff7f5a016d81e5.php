@@ -15,8 +15,8 @@ class __TwigTemplate_c6567453279fa2a43e91ccf2075908e2f1ded2a31399512ee93e60a2bf5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5bd7c363667011710b2dd17ab6c73345009bce300e12b6c6ac1ac84e54b6b981 = $this->env->getExtension("native_profiler");
-        $__internal_5bd7c363667011710b2dd17ab6c73345009bce300e12b6c6ac1ac84e54b6b981->enter($__internal_5bd7c363667011710b2dd17ab6c73345009bce300e12b6c6ac1ac84e54b6b981_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/toolbar.css.twig"));
+        $__internal_77719f32a471b557fb1b309d1ad68a4b4e73e9a886edb1c2b5bd5b09385fc864 = $this->env->getExtension("native_profiler");
+        $__internal_77719f32a471b557fb1b309d1ad68a4b4e73e9a886edb1c2b5bd5b09385fc864->enter($__internal_77719f32a471b557fb1b309d1ad68a4b4e73e9a886edb1c2b5bd5b09385fc864_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/toolbar.css.twig"));
 
         // line 1
         echo ".sf-minitoolbar {
@@ -193,7 +193,7 @@ class __TwigTemplate_c6567453279fa2a43e91ccf2075908e2f1ded2a31399512ee93e60a2bf5
 }
 
 .sf-toolbar-block .sf-toolbar-status-green {
-    background-color: #759e1a;
+    background-color: #5e8014;
 }
 
 .sf-toolbar-block .sf-toolbar-status-red {
@@ -475,7 +475,7 @@ class __TwigTemplate_c6567453279fa2a43e91ccf2075908e2f1ded2a31399512ee93e60a2bf5
 }
 ";
         
-        $__internal_5bd7c363667011710b2dd17ab6c73345009bce300e12b6c6ac1ac84e54b6b981->leave($__internal_5bd7c363667011710b2dd17ab6c73345009bce300e12b6c6ac1ac84e54b6b981_prof);
+        $__internal_77719f32a471b557fb1b309d1ad68a4b4e73e9a886edb1c2b5bd5b09385fc864->leave($__internal_77719f32a471b557fb1b309d1ad68a4b4e73e9a886edb1c2b5bd5b09385fc864_prof);
 
     }
 
@@ -668,7 +668,7 @@ class __TwigTemplate_c6567453279fa2a43e91ccf2075908e2f1ded2a31399512ee93e60a2bf5
 /* }*/
 /* */
 /* .sf-toolbar-block .sf-toolbar-status-green {*/
-/*     background-color: #759e1a;*/
+/*     background-color: #5e8014;*/
 /* }*/
 /* */
 /* .sf-toolbar-block .sf-toolbar-status-red {*/

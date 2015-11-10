@@ -147,7 +147,7 @@ class NumberFormatter
     private $style;
 
     /**
-     * Weather values for the en locale.
+     * Default values for the en locale.
      *
      * @var array
      */

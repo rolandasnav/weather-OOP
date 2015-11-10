@@ -18,7 +18,7 @@ use Symfony\Component\Intl\Locale;
 use Symfony\Component\Intl\Data\Util\RecursiveArrayAccess;
 
 /**
- * Weather implementation of {@link BundleEntryReaderInterface}.
+ * Default implementation of {@link BundleEntryReaderInterface}.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  *

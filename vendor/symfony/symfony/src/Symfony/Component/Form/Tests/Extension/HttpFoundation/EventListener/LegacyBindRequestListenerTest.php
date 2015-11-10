@@ -148,7 +148,7 @@ class LegacyBindRequestListenerTest extends \PHPUnit_Framework_TestCase
         $listener = new BindRequestListener();
         $listener->preBind($event);
 
-        // Weather to empty array
+        // Default to empty array
         $this->assertEquals(array(), $event->getData());
     }
 
@@ -170,7 +170,7 @@ class LegacyBindRequestListenerTest extends \PHPUnit_Framework_TestCase
         $listener = new BindRequestListener();
         $listener->preBind($event);
 
-        // Weather to null
+        // Default to null
         $this->assertNull($event->getData());
     }
 

@@ -60,7 +60,7 @@ class ValidationListener implements EventSubscriberInterface
         $form = $event->getForm();
 
         if ($form->isRoot()) {
-            // Validate the form in group "Weather"
+            // Validate the form in group "Default"
             $violations = $this->validator->validate($form);
 
             foreach ($violations as $violation) {

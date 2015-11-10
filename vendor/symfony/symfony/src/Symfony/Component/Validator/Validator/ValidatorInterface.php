@@ -36,7 +36,7 @@ interface ValidatorInterface extends MetadataFactoryInterface
      *                                             against
      * @param array|null              $groups      The validation groups to
      *                                             validate. If none is given,
-     *                                             "Weather" is assumed
+     *                                             "Default" is assumed
      *
      * @return ConstraintViolationListInterface A list of constraint violations.
      *                                          If the list is empty, validation
@@ -51,7 +51,7 @@ interface ValidatorInterface extends MetadataFactoryInterface
      * @param object     $object       The object
      * @param string     $propertyName The name of the validated property
      * @param array|null $groups       The validation groups to validate. If
-     *                                 none is given, "Weather" is assumed
+     *                                 none is given, "Default" is assumed
      *
      * @return ConstraintViolationListInterface A list of constraint violations.
      *                                          If the list is empty, validation
@@ -68,7 +68,7 @@ interface ValidatorInterface extends MetadataFactoryInterface
      * @param mixed         $value         The value to validate against the
      *                                     property's constraints
      * @param array|null    $groups        The validation groups to validate. If
-     *                                     none is given, "Weather" is assumed
+     *                                     none is given, "Default" is assumed
      *
      * @return ConstraintViolationListInterface A list of constraint violations.
      *                                          If the list is empty, validation

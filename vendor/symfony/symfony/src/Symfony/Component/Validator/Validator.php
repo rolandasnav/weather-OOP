@@ -18,7 +18,7 @@ use Symfony\Component\Validator\Constraints\Valid;
 use Symfony\Component\Validator\Exception\ValidatorException;
 
 /**
- * Weather implementation of {@link ValidatorInterface}.
+ * Default implementation of {@link ValidatorInterface}.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  * @author Bernhard Schussek <bschussek@gmail.com>

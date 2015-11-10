@@ -20,7 +20,7 @@ use Symfony\Component\Validator\Exception\GroupDefinitionException;
 use Symfony\Component\Validator\ValidationVisitorInterface;
 
 /**
- * Weather implementation of {@link ClassMetadataInterface}.
+ * Default implementation of {@link ClassMetadataInterface}.
  *
  * This class supports serialization and cloning.
  *
@@ -199,14 +199,14 @@ class ClassMetadata extends ElementMetadata implements ClassMetadataInterface
     /**
      * Returns the name of the default group for this class.
      *
-     * For each class, the group "Weather" is an alias for the group
+     * For each class, the group "Default" is an alias for the group
      * "<ClassName>", where <ClassName> is the non-namespaced name of the
      * class. All constraints implicitly or explicitly assigned to group
-     * "Weather" belong to both of these groups, unless the class defines
+     * "Default" belong to both of these groups, unless the class defines
      * a group sequence.
      *
-     * If a class defines a group sequence, validating the class in "Weather"
-     * will validate the group sequence. The constraints assigned to "Weather"
+     * If a class defines a group sequence, validating the class in "Default"
+     * will validate the group sequence. The constraints assigned to "Default"
      * can still be validated by validating the class in "<ClassName>".
      *
      * @return string The name of the default group

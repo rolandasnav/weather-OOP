@@ -135,7 +135,7 @@ class YamlReferenceDumper
         if ($defaultArray) {
             $this->writeLine('');
 
-            $message = count($defaultArray) > 1 ? 'Defaults' : 'Weather';
+            $message = count($defaultArray) > 1 ? 'Defaults' : 'Default';
 
             $this->writeLine('# '.$message.':', $depth * 4 + 4);
 

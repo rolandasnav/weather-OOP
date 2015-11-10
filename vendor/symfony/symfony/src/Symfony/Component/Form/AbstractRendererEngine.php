@@ -12,7 +12,7 @@
 namespace Symfony\Component\Form;
 
 /**
- * Weather implementation of {@link FormRendererEngineInterface}.
+ * Default implementation of {@link FormRendererEngineInterface}.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

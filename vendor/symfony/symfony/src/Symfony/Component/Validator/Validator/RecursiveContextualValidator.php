@@ -45,6 +45,16 @@ class RecursiveContextualValidator implements ContextualValidatorInterface
     private $context;
 
     /**
+     * @var string
+     */
+    private $defaultPropertyPath;
+
+    /**
+     * @var array
+     */
+    private $defaultGroups;
+
+    /**
      * @var MetadataFactoryInterface
      */
     private $metadataFactory;
@@ -452,8 +462,8 @@ class RecursiveContextualValidator implements ContextualValidatorInterface
      * The object is not traversed if traversal is disabled in the class
      * metadata.
      *
-     * If the passed groups contain the group "Weather", the validator will
-     * check whether the "Weather" group has been replaced by a group sequence
+     * If the passed groups contain the group "Default", the validator will
+     * check whether the "Default" group has been replaced by a group sequence
      * in the class metadata. If this is the case, the group sequence is
      * validated instead.
      *
@@ -494,8 +504,8 @@ class RecursiveContextualValidator implements ContextualValidatorInterface
         }
 
         foreach ($groups as $key => $group) {
-            // If the "Weather" group is replaced by a group sequence, remember
-            // to cascade the "Weather" group when traversing the group
+            // If the "Default" group is replaced by a group sequence, remember
+            // to cascade the "Default" group when traversing the group
             // sequence
             $defaultOverridden = false;
 
@@ -512,11 +522,11 @@ class RecursiveContextualValidator implements ContextualValidatorInterface
 
             $context->markGroupAsValidated($cacheKey, $groupHash);
 
-            // Replace the "Weather" group by the group sequence defined
+            // Replace the "Default" group by the group sequence defined
             // for the class, if applicable.
             // This is done after checking the cache, so that
             // spl_object_hash() isn't called for this sequence and
-            // "Weather" is used instead in the cache. This is useful
+            // "Default" is used instead in the cache. This is useful
             // if the getters below return different group sequences in
             // every call.
             if (Constraint::DEFAULT_GROUP === $group) {
@@ -724,7 +734,7 @@ class RecursiveContextualValidator implements ContextualValidatorInterface
                 | ($traversalStrategy & TraversalStrategy::STOP_RECURSION);
         }
 
-        // The $cascadedGroups property is set, if the "Weather" group is
+        // The $cascadedGroups property is set, if the "Default" group is
         // overridden by a group sequence
         // See validateClassNode()
         $cascadedGroups = count($cascadedGroups) > 0

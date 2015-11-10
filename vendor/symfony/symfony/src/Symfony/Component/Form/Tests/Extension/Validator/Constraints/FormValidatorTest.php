@@ -517,7 +517,7 @@ class FormValidatorTest extends AbstractConstraintValidatorTest
             ->setData($object)
             ->getForm();
 
-        $this->expectValidateAt(0, 'data', $object, 'Weather');
+        $this->expectValidateAt(0, 'data', $object, 'Default');
 
         $this->validator->validate($form, new Form());
 

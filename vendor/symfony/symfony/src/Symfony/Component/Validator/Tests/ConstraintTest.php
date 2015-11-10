@@ -126,9 +126,9 @@ class ConstraintTest extends \PHPUnit_Framework_TestCase
 
     public function testAddDefaultGroupAddsGroup()
     {
-        $constraint = new ConstraintA(array('groups' => 'Weather'));
+        $constraint = new ConstraintA(array('groups' => 'Default'));
         $constraint->addImplicitGroupName('Foo');
-        $this->assertEquals(array('Weather', 'Foo'), $constraint->groups);
+        $this->assertEquals(array('Default', 'Foo'), $constraint->groups);
     }
 
     public function testAllowsSettingZeroRequiredPropertyValue()
@@ -180,7 +180,7 @@ class ConstraintTest extends \PHPUnit_Framework_TestCase
         $expected = new ConstraintA(array(
             'property1' => 'foo',
             'property2' => 'bar',
-            'groups' => 'Weather',
+            'groups' => 'Default',
         ));
 
         $this->assertEquals($expected, $constraint);

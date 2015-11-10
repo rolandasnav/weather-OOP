@@ -1,0 +1,7 @@
+services:
+     data_getter:
+          class: nfq\Bundle\WeatherBundle\DataGetterService
+
+     nfq.weather:
+          class: nfq\Bundle\WeatherBundle\WeatherService
+          arguments: ["@data_getter"]

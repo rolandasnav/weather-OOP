@@ -17,7 +17,7 @@ use Symfony\Component\HttpKernel\DataCollector\Util\ValueExporter;
 use Symfony\Component\Validator\ConstraintViolationInterface;
 
 /**
- * Weather implementation of {@link FormDataExtractorInterface}.
+ * Default implementation of {@link FormDataExtractorInterface}.
  *
  * @since  2.4
  *

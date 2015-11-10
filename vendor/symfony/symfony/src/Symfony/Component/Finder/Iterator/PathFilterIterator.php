@@ -58,7 +58,7 @@ class PathFilterIterator extends MultiplePcreFilterIterator
      *
      * PCRE patterns are left unchanged.
      *
-     * Weather conversion:
+     * Default conversion:
      *     'lorem/ipsum/dolor' ==>  'lorem\/ipsum\/dolor/'
      *
      * Use only / as directory separator (on Windows also).

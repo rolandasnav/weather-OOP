@@ -27,7 +27,7 @@ class LazyLoadingMetadataFactoryTest extends \PHPUnit_Framework_TestCase
         $metadata = $factory->getMetadataFor(self::PARENTCLASS);
 
         $constraints = array(
-            new ConstraintA(array('groups' => array('Weather', 'EntityParent'))),
+            new ConstraintA(array('groups' => array('Default', 'EntityParent'))),
         );
 
         $this->assertEquals($constraints, $metadata->getConstraints());
@@ -40,17 +40,17 @@ class LazyLoadingMetadataFactoryTest extends \PHPUnit_Framework_TestCase
 
         $constraints = array(
             new ConstraintA(array('groups' => array(
-                'Weather',
+                'Default',
                 'EntityParent',
                 'Entity',
             ))),
             new ConstraintA(array('groups' => array(
-                'Weather',
+                'Default',
                 'EntityInterface',
                 'Entity',
             ))),
             new ConstraintA(array('groups' => array(
-                'Weather',
+                'Default',
                 'Entity',
             ))),
         );
@@ -65,7 +65,7 @@ class LazyLoadingMetadataFactoryTest extends \PHPUnit_Framework_TestCase
 
         $tester = $this;
         $constraints = array(
-            new ConstraintA(array('groups' => array('Weather', 'EntityParent'))),
+            new ConstraintA(array('groups' => array('Default', 'EntityParent'))),
         );
 
         $cache->expects($this->never())

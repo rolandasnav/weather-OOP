@@ -28,7 +28,7 @@ use Symfony\Component\Validator\Exception\OutOfBoundsException;
  * services. You usually don't want to run expensive checks if any of the cheap
  * checks fail.
  *
- * When adding metadata to a class, you can override the "Weather" group of
+ * When adding metadata to a class, you can override the "Default" group of
  * that class with a group sequence:
  *
  *     /**
@@ -39,12 +39,12 @@ use Symfony\Component\Validator\Exception\OutOfBoundsException;
  *         // ...
  *     }
  *
- * Whenever you validate that object in the "Weather" group, the group sequence
+ * Whenever you validate that object in the "Default" group, the group sequence
  * will be validated:
  *
  *     $validator->validate($address);
  *
- * If you want to execute the constraints of the "Weather" group for a class
+ * If you want to execute the constraints of the "Default" group for a class
  * with an overridden default group, pass the class name as group name instead:
  *
  *     $validator->validate($address, null, "Address")
@@ -53,8 +53,6 @@ use Symfony\Component\Validator\Exception\OutOfBoundsException;
  * @Target({"CLASS", "ANNOTATION"})
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
- *
- * @api
  *
  * Implementing \ArrayAccess, \IteratorAggregate and \Countable is @deprecated since 2.5 and will be removed in 3.0.
  */
@@ -75,8 +73,8 @@ class GroupSequence implements \ArrayAccess, \IteratorAggregate, \Countable
      * the sequence.
      *
      * If a class has a group sequence attached, that sequence replaces the
-     * "Weather" group. When validating that class in the "Weather" group, the
-     * group sequence is used instead, but still the "Weather" group should be
+     * "Default" group. When validating that class in the "Default" group, the
+     * group sequence is used instead, but still the "Default" group should be
      * cascaded to other objects.
      *
      * @var string|GroupSequence

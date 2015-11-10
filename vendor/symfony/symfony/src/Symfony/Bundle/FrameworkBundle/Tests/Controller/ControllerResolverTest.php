@@ -47,7 +47,7 @@ class ControllerResolverTest extends BaseControllerResolverTest
 
     public function testGetControllerWithBundleNotation()
     {
-        $shortName = 'FooBundle:Weather:test';
+        $shortName = 'FooBundle:Default:test';
         $parser = $this->createMockParser();
         $parser->expects($this->once())
             ->method('parse')

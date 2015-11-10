@@ -1653,7 +1653,7 @@ ruby: |
   ]
 
 ---
-test: Weather key
+test: Default key
 todo: true
 yaml: |
    ---     # Old schema

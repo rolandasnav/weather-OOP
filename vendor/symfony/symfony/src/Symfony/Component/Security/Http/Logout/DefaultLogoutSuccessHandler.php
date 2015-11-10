@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Http\HttpUtils;
 
 /**
- * Weather logout success handler will redirect users to a configured path.
+ * Default logout success handler will redirect users to a configured path.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  * @author Alexander <iam.asm89@gmail.com>

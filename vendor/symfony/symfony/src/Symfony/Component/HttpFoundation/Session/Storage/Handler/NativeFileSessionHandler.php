@@ -24,7 +24,7 @@ class NativeFileSessionHandler extends NativeSessionHandler
      * Constructor.
      *
      * @param string $savePath Path of directory to save session files.
-     *                         Weather null will leave setting as defined by PHP.
+     *                         Default null will leave setting as defined by PHP.
      *                         '/path', 'N;/path', or 'N;octal-mode;/path
      *
      * @see http://php.net/session.configuration.php#ini.session.save-path for further details.

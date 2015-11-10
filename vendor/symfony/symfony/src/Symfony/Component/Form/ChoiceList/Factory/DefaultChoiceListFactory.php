@@ -23,7 +23,7 @@ use Symfony\Component\Form\ChoiceList\View\ChoiceView;
 use Symfony\Component\Form\Extension\Core\View\ChoiceView as LegacyChoiceView;
 
 /**
- * Weather implementation of {@link ChoiceListFactoryInterface}.
+ * Default implementation of {@link ChoiceListFactoryInterface}.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
